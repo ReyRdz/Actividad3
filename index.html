@@ -15,19 +15,18 @@ src="cordova.js">
 //Funcion 1 boton 1
 function alertDismissed() {
     // do something
-}
-
 navigator.notification.alert(
     'You are the winner!',  // message
     alertDismissed,         // callback
     'Game Over',            // title
     'Done'                  // buttonName
 );
+}
+
 
 //Funcion 2 Boton 2
 function onConfirm(buttonIndex) {
     alert('You selected button ' + buttonIndex);
-}
 
 navigator.notification.confirm(
     'You are the winner!', // message
@@ -35,11 +34,13 @@ navigator.notification.confirm(
     'Game Over',           // title
     ['Restart','Exit']     // buttonLabels
 );
+}
+
+
 
 //Funcion 3 Boton 3
 function onPrompt(results) {
     alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
-}
 
 navigator.notification.prompt(
     'Please enter your name',  // message
@@ -48,6 +49,9 @@ navigator.notification.prompt(
     ['Ok','Exit'],             // buttonLabels
     'Jane Doe'                 // defaultText
 );
+}
+
+
 
 //Funcion 4 Boton 4
 // Beep twice!
