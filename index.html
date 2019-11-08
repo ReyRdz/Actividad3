@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-type" content="text/html;
+charset=utf-8">
+<meta name="viewport" id="viewport"
+content="width=device-width, height=device-height,
+initial-scale=1.0, maximum-scale=1.0,
+user-scalable=no;" />
+<script type="text/javascript" charset="utf-8"
+src="cordova.js">
+<script type="text/javascript" charset="utf-8">
+
+//Funcion 1 boton 1
+function alertDismissed() {
+    // do something
+}
+
+navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
+
+//Funcion 2 Boton 2
+function onConfirm(buttonIndex) {
+    alert('You selected button ' + buttonIndex);
+}
+
+navigator.notification.confirm(
+    'You are the winner!', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Game Over',           // title
+    ['Restart','Exit']     // buttonLabels
+);
+
+//Funcion 3 Boton 3
+function onPrompt(results) {
+    alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+}
+
+navigator.notification.prompt(
+    'Please enter your name',  // message
+    onPrompt,                  // callback to invoke
+    'Registration',            // title
+    ['Ok','Exit'],             // buttonLabels
+    'Jane Doe'                 // defaultText
+);
+
+//Funcion 4 Boton 4
+// Beep twice!
+function beep(){
+navigator.notification.beep(2);
+}
+
+
+</script>
+<title></title>
+</head>
+<body>
+
+<button onclick="alertDismissed()"> Boton 1 Funcion 1</button>
+<button onclick="onConfirm()"> Boton 2 Funcion 2</button>
+<button onclick="onPrompt()"> Boton 3 Funcion 3</button>
+<button onclick="beep()"> Boton 4 Funcion 4</button>
+
+
+</body>
+</html>
