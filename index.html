@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-type" content="text/html;
+charset=utf-8">
+<meta name="viewport" id="viewport"
+content="width=device-width, height=device-height,
+initial-scale=1.0, maximum-scale=1.0,
+user-scalable=no;" />
+<script type="text/javascript" charset="utf-8"
+src="cordova.js">
+
+<script type="text/javascript" charset="utf-8">
+
+function alert() { navigator.notification.alert('Alert de Phonegap', alertDismissed, 'Boton', 'hecho');}
+
+function confirm() { navigator.notification.confirm("Confirm de Phonegap");}
+	
+function prompt() { navigator.notification.promt("Promt de Phonegap");}
+					
+function playbeep() { navigator.notification.beep(2);}
+</script>
+<title></title>
+</head>
+<body>
+	<center><h1>Actividad 3</h1></center>
+	<button class="btn btn-primary btn-lg" href='javascript:;' onclick="alert();">Alert</button>
+	<button class="btn btn-primary btn-lg" href='javascript:;' onclick="confirm();">Confirm</button>
+	<button class="btn btn-primary btn-lg" href='javascript:;' onclick="prompt();">Prompt</button>
+	<button class="btn btn-primary btn-lg" href='javascript:;' onclick="playbeep();">Beep</button>
+	<h2>Equipo:</h2>
+	<h3>Reymundo Rodriguez Avila</h3>
+	<h3>Jesus Eduardo Barrios Quiroz</h3>
+</body>
+</html>
